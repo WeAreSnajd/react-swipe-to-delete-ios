@@ -1,12 +1,12 @@
 {
   "name": "react-swipe-to-delete-ios",
-  "homepage": "https://arnaudambro.github.io/react-swipe-to-delete-ios/",
+  "homepage": "https://WeAreSnajd.github.io/react-swipe-to-delete-ios/",
   "author": "Arnaud Ambroselli <arnaud@ambroselli.io>",
   "repository": {
     "type": "git",
-    "url": "git@github.com:arnaudambro/react-swipe-to-delete-ios.git"
+    "url": "git@github.com:WeAreSnajd/react-swipe-to-delete-ios.git"
   },
-  "version": "1.0.11",
+  "version": "1.0.12",
   "private": false,
   "license": "MIT",
   "main": "lib/index.js",
@@ -28,6 +28,7 @@
     "ios"
   ],
   "devDependencies": {
+    "@babel/core": "^7.14.3",
     "@babel/cli": "7.8.4",
     "@babel/compat-data": "7.9.0",
     "@babel/plugin-proposal-class-properties": "7.8.3",
