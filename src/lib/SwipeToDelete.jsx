@@ -76,8 +76,13 @@ class SwipeToDelete extends React.Component {
     this.addEventListenerToMoveAndUp(true)
   }
 
-  onDeleteClick = () => {
-    const { transitionDuration, onDelete } = this.props;
+  onDeleteClick = async () => {
+    const { transitionDuration, onDelete, confirmDelete } = this.props;
+
+    if (! await confirmDelete()) {
+      return;
+    }
+
     this.setState({ deleting: true }, () => {
       window.setTimeout(() => {
         onDelete();
@@ -141,6 +146,7 @@ SwipeToDelete.propTypes = {
   deleteComponent: PropTypes.node,
   disabled: PropTypes.bool,
   rtl: PropTypes.bool,
+  confirmDelete: PropTypes.func,
 }
 
 SwipeToDelete.defaultProps = {
@@ -150,6 +156,7 @@ SwipeToDelete.defaultProps = {
   deleteText: 'Delete',
   disabled: false,
   rtl: false,
+  confirmDelete: () => true,
 }
 
 
