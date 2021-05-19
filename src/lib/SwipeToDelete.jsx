@@ -65,7 +65,8 @@ class SwipeToDelete extends React.Component {
     const acceptableMove = -deleteWidth * 0.7;
     const showDelete = (rtl ? -1 : 1) * this.state.translate < acceptableMove;
     const notShowDelete = (rtl ? -1 : 1) * this.state.translate >= acceptableMove;
-    const deleteWithoutConfirm = (rtl ? 1 : -1) * this.state.translate >= this.deleteWithoutConfirmThreshold;
+    // const deleteWithoutConfirm = (rtl ? 1 : -1) * this.state.translate >= this.deleteWithoutConfirmThreshold;
+    const deleteWithoutConfirm = false;
     if (deleteWithoutConfirm) newState.translate = -this.containerWidth;
     if (notShowDelete) newState.translate = 0;
     if (showDelete && !deleteWithoutConfirm) newState.translate = (rtl ? 1 : -1) * deleteWidth;
