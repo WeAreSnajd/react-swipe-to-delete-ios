@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git@github.com:WeAreSnajd/react-swipe-to-delete-ios.git"
   },
-  "version": "1.0.12",
+  "version": "1.0.13",
   "private": false,
   "license": "MIT",
   "main": "lib/index.js",
